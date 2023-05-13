@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "joinautosprint",
+  "version": "${version}",
+  "name": "JoinAutoSprintMod",
+  "description": "Simple mod that turns on toggle sprinting when you join any world/server",
+  "authors": [
+    "Slackow"
+  ],
+  "contact": {
+    "repo": "https://github.com/slackow/JoinAutoSprintMod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/JoinAutoSprintMod/icon.png",
+  "environment": "client",
+  "mixins": [
+    "JoinAutoSprintMod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=1.15"
+  }
+}
