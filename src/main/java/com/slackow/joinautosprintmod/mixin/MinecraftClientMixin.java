@@ -2,7 +2,6 @@ package com.slackow.joinautosprintmod.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
-import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.world.ClientWorld;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,10 +16,11 @@ public class MinecraftClientMixin {
 
     @Inject(method = "joinWorld", at = @At("HEAD"))
     public void onWorldJoin(ClientWorld world, CallbackInfo ci) {
-        KeyBinding sprintKey = options.sprintKey;
+        var sprintKey = options.sprintKey;
         options.getSprintToggled().setValue(true);
         if (!sprintKey.isPressed()) {
             sprintKey.setPressed(true);
         }
     }
 }
+

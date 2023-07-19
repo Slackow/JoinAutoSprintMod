@@ -8,13 +8,14 @@
     "Slackow"
   ],
   "contact": {
-    "repo": "https://github.com/slackow/JoinAutoSprintMod"
+    "repo": "https://github.com/slackow/JoinAutoSprintMod",
+    "homepage": "https://modrinth.com/mod/join-autosprint-mod"
   },
   "license": "All-Rights-Reserved",
-  "icon": "assets/JoinAutoSprintMod/icon.png",
+  "icon": "assets/joinautosprintmod/icon.png",
   "environment": "client",
   "mixins": [
-    "JoinAutoSprintMod.mixins.json"
+    "joinautosprintmod.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
