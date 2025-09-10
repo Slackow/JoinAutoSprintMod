@@ -1,0 +1,16 @@
+
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "All-Rights-Reserved"
+showAsResourcePack=false
+showAsDataPack=false
+
+[[mods]]
+modId = "joinautosprint"
+version = "1.0.3"
+description = "Simple mod that turns on toggle sprinting when you join any world/server"
+authors = "Slackow"
+logoFile = "../assets/joinautosprintmod/icon.png"
+
+[[mixins]]
+config = "joinautosprintmod.mixins.json"
