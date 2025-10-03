@@ -12,13 +12,13 @@
     "homepage": "https://modrinth.com/mod/join-autosprint-mod"
   },
   "license": "All-Rights-Reserved",
-  "icon": "assets/joinautosprintmod/icon.png",
-  "environment": "client",
+  "icon": "assets/joinautosprint/icon.png",
+  "environment": "*",
   "mixins": [
-    "joinautosprintmod.mixins.json"
+    "joinautosprint.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.4",
-    "minecraft": ">1.20.4"
+    "minecraft": ">=1.20.1"
   }
 }

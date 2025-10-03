@@ -14,12 +14,7 @@ public class ClientPacketListenerMixin {
     public void onRespawn(CallbackInfo ci) {
         SprintOptions sprintOptions = SprintOptions.load(Minecraft.getInstance().gameDirectory.toPath().resolve("config"));
         if (sprintOptions.autoSprintOnRespawn) {
-            var options = Minecraft.getInstance().options;
-            var sprintKey = options.keySprint;
-            options.toggleSprint().set(true);
-            if (!sprintKey.isDown()) {
-                sprintKey.setDown(true);
-            }
+            SprintOptions.setSprinting();
         }
     }
 }

@@ -10,7 +10,7 @@ modId = "joinautosprint"
 version = "1.0.3"
 description = "Simple mod that turns on toggle sprinting when you join any world/server"
 authors = "Slackow"
-logoFile = "../assets/joinautosprintmod/icon.png"
+logoFile = "assets/joinautosprint/icon.png"
 
 [[mixins]]
-config = "joinautosprintmod.mixins.json"
+config = "joinautosprint.mixins.json"

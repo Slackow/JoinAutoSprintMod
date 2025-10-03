@@ -23,19 +23,19 @@ dependencies {
     }
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property "version", version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version,
+        expand "version": version,
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 17
 sourceCompatibility = targetCompatibility = targetJavaVersion
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
@@ -54,10 +54,7 @@ java {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
     archivesBaseName = project.archives_base_name
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
-    withSourcesJar()
+//    withSourcesJar()
 }
 
 jar {
