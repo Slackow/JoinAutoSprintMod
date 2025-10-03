@@ -66,7 +66,7 @@ public class OptionsMixin {
     private OptionInstance.TooltipSupplier<Boolean> changeToggleSprintTooltip(OptionInstance.TooltipSupplier<Boolean> defaultValue) {
         return (c) -> {
             var options = SprintOptions.load(null);
-            return c && options.anyOn() ? Tooltip.create(Component.translatable("joinautosprint.tooltip.affected")) : Tooltip.create(Component.empty());
+            return c && options.anyOn() ? Tooltip.create(Component.translatableWithFallback("joinautosprint.tooltip.affected", "Affected by JoinAutoSprintMod")) : Tooltip.create(Component.empty());
         };
     }
 }
