@@ -56,7 +56,9 @@ public class SprintOptions {
     }
 
     public static void setSprinting() {
-        var options = Minecraft.getInstance().options;
+        Minecraft instance = Minecraft.getInstance();
+        var options = instance.options;
+        if (options == null) return;
         var sprintKey = options.keySprint;
         if (!options.toggleSprint().get()){
             options.toggleSprint().set(true);
