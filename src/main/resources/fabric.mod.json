@@ -18,7 +18,7 @@
     "joinautosprint.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.4",
-    "minecraft": ">=1.21.9"
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}"
   }
 }
