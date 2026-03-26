@@ -7,6 +7,7 @@
   ],
   "client": [
     "ClientPacketListenerMixin",
+    "MinecraftClientAccessor",
     "MinecraftClientMixin",
     "OptionsMixin"
   ],
