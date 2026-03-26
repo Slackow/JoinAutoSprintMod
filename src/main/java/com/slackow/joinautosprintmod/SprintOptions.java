@@ -2,6 +2,7 @@ package com.slackow.joinautosprintmod;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.slackow.joinautosprintmod.mixin.MinecraftClientAccessor;
 import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
@@ -55,8 +56,13 @@ public class SprintOptions {
         return autoSprintOnWorldJoin || autoSprintOnRespawn;
     }
 
+    private static long lastTick = -1;
+
     public static void setSprinting() {
         Minecraft instance = Minecraft.getInstance();
+        long tickCount = ((MinecraftClientAccessor) instance).tickCount();
+        if (tickCount == lastTick) return;
+        lastTick = tickCount;
         var options = instance.options;
         if (options == null) return;
         var sprintKey = options.keySprint;
@@ -66,6 +72,6 @@ public class SprintOptions {
         if (!sprintKey.isDown()) {
             sprintKey.setDown(true);
         }
-        System.out.println("Set to be sprinting");
+//        System.out.println("Set to be sprinting");
     }
 }
